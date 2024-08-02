@@ -1,0 +1,59 @@
+const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+
+module.exports = {
+
+  name: 'help',
+
+  description: 'helping?',
+
+  type: 'CHAT_INPUT',
+
+  cooldown: 10,
+
+  run: async (client, interaction, args) => {
+
+    console.log(args);
+
+    const content = `
+
+**ProBit** prefix is \`/\` and \`!\`
+Dashboard at <SOON>
+Looking for support? https://discord.gg/cEExFgxzaV
+
+    `;
+
+    if (!content || content.trim() === '') {
+
+      console.error("Message content must be a non-empty string.");
+
+      return;
+
+    }
+
+    const row = new MessageActionRow()
+
+      .addComponents(
+
+        new MessageButton()
+
+          .setLabel('Add Bot to Server')
+
+          .setStyle('LINK')
+
+          .setURL('https://discord.com/oauth2/authorize?client_id=1005027242075758613')
+
+      );
+
+    try {
+
+      await interaction.reply({ content: content, components: [row], ephemeral: true });
+
+    } catch (err) {
+
+      console.error("Failed to send the message:", err);
+
+    }
+
+  }
+
+};

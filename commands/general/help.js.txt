@@ -1,0 +1,76 @@
+const { MessageActionRow, MessageButton } = require('discord.js');
+
+module.exports = {
+
+  name: 'help',
+
+  description: 'Send a custom message to the user.',
+cooldwon: 10,
+  run: async (client, message, args) => {
+
+    try {
+
+      // الرسالة المحددة
+
+      const customMessage = `**ProBit** prefix is \`/\` and \`!\`
+
+Dashboard at <SOON>
+
+Looking for support?
+https://discord.gg/cEExFgxzaV`;
+
+      // إنشاء الرابط للانضمام إلى السيرفر
+
+      const joinLink = 'https://discord.com/oauth2/authorize?client_id=1005027242075758613';
+
+      // إنشاء الزر لفتح الرابط
+
+      const joinButton = new MessageButton()
+
+        .setLabel('add bot to server')
+
+        .setStyle('LINK')
+
+        .setURL(joinLink);
+
+      // محاولة إرسال الرسالة في الخاص للمستخدم
+
+      await message.author.send({ content: customMessage, components: [new MessageActionRow().addComponents(joinButton)] })
+
+        .then(() => {
+
+          // إرسال رد فعل "✅" على رسالة الاستخدام في القناة إذا نجحت الرسالة
+
+          return message.react('✅');
+
+        })
+
+        .catch(async (error) => {
+
+          if (error.code === 50007) { // DiscordAPIError: Cannot send messages to this user
+
+            // إرسال رد فعل "❌" في القناة إذا كانت الرسائل الخاصة مغلقة
+
+            await message.react('❌');
+
+          } else {
+
+            console.error('An unexpected error occurred:', error);
+
+            return message.reply('An unexpected error occurred while processing your request.');
+
+          }
+
+        });
+
+    } catch (error) {
+
+      console.error('An error occurred:', error);
+
+      return message.reply('An error occurred while processing your request.');
+
+    }
+
+  }
+
+};
