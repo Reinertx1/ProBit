@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@codedipper/random-code": "^3.1.0",
+    "@discordjs/voice": "^0.16.0",
+    "ascii-table": "^0.0.9",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "cache": "^3.0.0",
+    "canvas": "^2.11.2",
+    "chartjs-node-canvas": "^4.1.6",
+    "clean": "^4.0.2",
+    "discord-arts": "^0.6.1",
+    "discord-inviter": "^0.9.3",
+    "discord.js": "^13.17.1",
+    "dotenv": "^16.4.5",
+    "editor-canvas": "^0.2.3",
+    "install": "^0.13.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.4.0",
+    "npm": "^10.8.1",
+    "pro.db": "^3.0.8",
+    "proper-lockfile": "^4.1.2",
+    "punycode": "^2.3.1",
+    "quick.db": "^9.1.7",
+    "update": "^0.7.4",
+    "whatwg-url": "^14.0.0"
+  }
+}
