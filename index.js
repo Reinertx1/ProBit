@@ -417,4 +417,4 @@ client.on('messageCreate', async message => {
 
                         
           
-client.login("MTI0NTU5Nzc0NDk0OTg5MTE1Mw.GZf9QP.BxAa-zzLemN3kga7qgzDjiXiWT8zhdneAFHHjM")
+client.login("MTA4MTU3ODUxMTE3NDc1MDI3OA.GdzNM7.mcUwIxEStSU8v19Zcqr_EEnIKtaVo5dsy1V-hI")
