@@ -1,5 +1,5 @@
 module.exports = {
-  token:"MTAwNTAyNzI0MjA3NTc1ODYxMw.Gqn9sH.lUVSeiSkt-DJkBM7kziipdYjTBKUVHc3V7k5eg",
+  token:"MTA4MTU3ODUxMTE3NDc1MDI3OA.GdzNM7.mcUwIxEStSU8v19Zcqr_EEnIKtaVo5dsy1V-hI",
   globalBot: true, // false => if bot is private bot - true => if bot isn't private bot
   guildID: "1034469502311747705",
 }
